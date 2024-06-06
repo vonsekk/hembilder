@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+
+:root {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8vw;
+    color: #f0f0f0;
+    line-height: 1.5;
+    text-wrap: pretty;
+
+    background-image: url(background.webp);
+    background-size: cover;
+    background-position: 70%;
+
+    overflow: hidden;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 1fr;
+
+    backdrop-filter: blur(10px);
+    background-image: url(overlay.webp);
+    background-position: 70%;
+
+    mask-image: url(mask.svg);
+    mask-size: cover;
+    mask-position: bottom;
+}
+
+.wrapper {
+    max-width: 100%;
+    height: 100%;
+    padding: 4rem 3rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.6rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    gap: 1rem;
+}
+
+.logo {
+    display: block;
+    width: 8rem;
+    margin: auto;
+}
+
+h1 {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-wrap: nowrap;
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        font-size: 3.2vw;
+        text-align: center;
+    }
+
+    body {
+        grid-template-columns: 1fr;
+        mask: none;
+    }
+
+    .heading {
+        margin: auto;
+    }
+}

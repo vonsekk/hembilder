@@ -1,0 +1,15 @@
+{
+    "endOfLine": "auto",
+    "overrides": [
+        {
+            "files": ["*.svg"],
+            "options": {
+                "parser": "html"
+            }
+        }
+    ],
+    "printWidth": 120,
+    "proseWrap": "always",
+    "quoteProps": "consistent",
+    "tabWidth": 4
+}
